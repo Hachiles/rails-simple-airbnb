@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h1>All our flats (<%= @flats.count %>)</h1>
+  <div class="d-flex justify-content-between">
+    <% @flats.each do |flat| %>
+      <div class="flat card">
+        <h4><%= flat.name %></h4>
+        <p><%= flat.address %></p>
+        <p>🙍🏻‍♂️ <%= flat.number_of_guests %> 💶 <%= flat.price_per_night %></p>
+        <p><%= link_to 'More info', flat_path(flat) %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
